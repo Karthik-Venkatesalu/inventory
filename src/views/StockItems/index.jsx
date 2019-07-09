@@ -28,7 +28,7 @@ import { Dashboard as DashboardLayout } from 'layouts';
 import { getProducts } from 'services/product';
 
 // Custom components
-import { ProductsToolbar, ProductCard } from './components';
+import { StockItemCard, StockItemsToolbar } from './components';
 
 // Component styles
 import styles from './styles';
@@ -112,7 +112,7 @@ class StockItems extends Component {
             xs={12}
           >
             <Link to="#">
-              <ProductCard product={product} />
+              <StockItemCard product={product} />
             </Link>
           </Grid>
         ))}
@@ -126,7 +126,7 @@ class StockItems extends Component {
     return (
       <DashboardLayout title="Products">
         <div className={classes.root}>
-          <ProductsToolbar />
+          <StockItemsToolbar />
           <div className={classes.content}>{this.renderProducts()}</div>
           <div className={classes.pagination}>
             <Typography variant="caption">1-6 of 20</Typography>

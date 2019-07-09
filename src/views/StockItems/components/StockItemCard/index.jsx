@@ -30,6 +30,23 @@ class StockItemCard extends Component {
 
     return (
       <Paper className={rootClassName}>
+        <div className={classes.stats}>
+          <AccessTimeIcon className={classes.updateIcon} />
+          <Typography
+            className={classes.updateText}
+            variant="body2"
+          >
+            Updated 2hr ago
+          </Typography>
+          <GetAppIcon className={classes.downloadsIcon} />
+          <Typography
+            className={classes.downloadsText}
+            variant="body2"
+          >
+            {product.totalDownloads} Downloads
+          </Typography>
+        </div>
+        <Divider />
         <div className={classes.imageWrapper}>
           <img
             alt="Product"
@@ -49,23 +66,6 @@ class StockItemCard extends Component {
             variant="body1"
           >
             {product.description}
-          </Typography>
-        </div>
-        <Divider />
-        <div className={classes.stats}>
-          <AccessTimeIcon className={classes.updateIcon} />
-          <Typography
-            className={classes.updateText}
-            variant="body2"
-          >
-            Updated 2hr ago
-          </Typography>
-          <GetAppIcon className={classes.downloadsIcon} />
-          <Typography
-            className={classes.downloadsText}
-            variant="body2"
-          >
-            {product.totalDownloads} Downloads
           </Typography>
         </div>
       </Paper>

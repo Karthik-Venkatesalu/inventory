@@ -30,7 +30,8 @@ import {
   ImageOutlined as ImageIcon,
   InfoOutlined as InfoIcon,
   AccountBoxOutlined as AccountBoxIcon,
-  SettingsOutlined as SettingsIcon
+  SettingsOutlined as SettingsIcon,
+  ListTwoTone
 } from '@material-ui/icons';
 
 // Component styles
@@ -138,7 +139,7 @@ class Sidebar extends Component {
             to="/stockitems"
           >
             <ListItemIcon className={classes.listItemIcon}>
-              <DashboardIcon />
+              <ListTwoTone />
             </ListItemIcon>
             <ListItemText
               classes={{ primary: classes.listItemText }}
