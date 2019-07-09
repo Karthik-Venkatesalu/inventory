@@ -49,11 +49,17 @@ class Sidebar extends Component {
             className={classes.logoLink}
             to="/"
           >
-            <img
+            {/* <img
               alt="Brainalytica logo"
               className={classes.logoImage}
               src="/images/logos/brainalytica_logo.svg"
-            />
+            /> */}
+            <Typography
+              className={classes.nameText}
+              variant="h3"
+            >
+              United Store
+            </Typography>
           </Link>
         </div>
         <Divider className={classes.logoDivider} />
@@ -75,7 +81,7 @@ class Sidebar extends Component {
             className={classes.bioText}
             variant="caption"
           >
-						Brain Director
+						Admin Profile
           </Typography>
         </div>
         <Divider className={classes.profileDivider} />
@@ -123,6 +129,20 @@ class Sidebar extends Component {
             <ListItemText
               classes={{ primary: classes.listItemText }}
               primary="Products"
+            />
+          </ListItem>
+          <ListItem
+            activeClassName={classes.activeListItem}
+            className={classes.listItem}
+            component={NavLink}
+            to="/stockitems"
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Stock Items"
             />
           </ListItem>
           <ListItem

@@ -13,6 +13,7 @@ import SignUp from './views/SignUp';
 import SignIn from './views/SignIn';
 import UnderDevelopment from './views/UnderDevelopment';
 import NotFound from './views/NotFound';
+import StockItems from './views/StockItems';
 
 export default class Routes extends Component {
   render() {
@@ -37,6 +38,11 @@ export default class Routes extends Component {
           component={ProductList}
           exact
           path="/products"
+        />
+        <Route
+          component={StockItems}
+          exact
+          path="/stockitems"
         />
         <Route
           component={Typography}
